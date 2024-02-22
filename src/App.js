@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import logo from "./logo.svg";
+//import "./App.css";
+import { Routes, Route } from "react-router-dom";
+//import
+import Navigation from "./components/navigation/navigation";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <div className="container mx-auto bg-gray-200 rounded-xl">
+        <p className="text-3xl text-gray-700 font-bold mb-5">welcome!</p>
+        <div className="text-gray-500 text-lg">React Tailwind</div>
+      </div> */}
+      {/* <Routes></Routes> */}
+      <Navigation></Navigation>
     </div>
   );
 }
