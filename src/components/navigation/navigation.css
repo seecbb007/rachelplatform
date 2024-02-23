@@ -12,6 +12,27 @@
 .logo {
   width: 163px;
   height: 3rem;
+  margin-right: 2rem;
+}
+
+.nav_dropdown {
+  display: none;
+  position: absolute;
+  top: 6rem;
+  left: auto;
+  width: 10rem;
+  padding: 0.5rem 1rem;
+  background-color: #f2f5f8;
+  color: #171a65;
+  border-radius: 0.75rem;
+}
+
+.nav_dropdown .nav_dropdown_each {
+  padding: 0.25rem 0;
+}
+
+.nav_dropdown .nav_dropdown_each:hover {
+  color: #6666ff;
 }
 
 .nav_selections {
@@ -37,27 +58,16 @@
   color: #e2e7ec;
 }
 
-.nav_selections .nav_select .nav_select_w_dropdown:hover {
+.nav_selections .nav_select_w_dropdown {
+  padding: 2.2rem 0;
+}
+
+.nav_selections .nav_select_w_dropdown:hover {
   cursor: pointer;
 }
 
-.nav_selections .nav_dropdown {
-  position: absolute;
-  top: 6rem;
-  left: auto;
-  width: 10rem;
-  padding: 0.5rem 1rem;
-  background-color: #f2f5f8;
-  color: #171a65;
-  border-radius: 0.75rem;
-}
-
-.nav_selections .nav_dropdown .nav_dropdown_each {
-  padding: 0.25rem 0;
-}
-
-.nav_selections .nav_dropdown .nav_dropdown_each:hover {
-  color: #6666ff;
+.nav_selections .nav_select_w_dropdown:hover .nav_dropdown {
+  display: block;
 }
 
 .nav_selections .easyApply_butt {
