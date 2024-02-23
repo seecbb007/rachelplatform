@@ -49,10 +49,21 @@
   padding: 0.5rem 1rem;
   background-color: #f2f5f8;
   color: #171a65;
+  border-radius: 0.75rem;
+}
+
+.nav_selections .nav_dropdown .nav_dropdown_each {
+  padding: 0.25rem 0;
 }
 
 .nav_selections .nav_dropdown .nav_dropdown_each:hover {
   color: #6666ff;
+}
+
+.nav_selections .easyApply_butt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav_selections .icon_dr {
