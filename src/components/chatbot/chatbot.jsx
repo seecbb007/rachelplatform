@@ -74,8 +74,16 @@ export default function Chatbot() {
         </div>
         <div className="rachel_preapprovalSelections">
           <div>
-            <div style={{ fontWeight: "600" }}>Instant Prequal Letter</div>
-            <div style={{ fontWeight: "300" }}>
+            <div
+              className="rachel_preapprovalSelections_title"
+              style={{ fontWeight: "600" }}
+            >
+              Instant Prequal Letter
+            </div>
+            <div
+              className="rachel_preapprovalSelections_subtitle"
+              style={{ fontWeight: "300" }}
+            >
               I'm looking to get a 2 minutes prequalification Letter
             </div>
           </div>
@@ -99,7 +107,7 @@ export default function Chatbot() {
           </div>
         </div>
         <div className="rachel_inputContainer">
-          <label class="custom_file_upload">
+          <label class="custom_file_upload remind" id="reminder_upload">
             <input type="file" style={{ display: "none" }} />
             <svg
               t="1708728039216"
@@ -117,6 +125,7 @@ export default function Chatbot() {
                 fill="#191970"
               ></path>
             </svg>
+            <div className="reminder_message">Analyze pictures and files</div>
           </label>
           <textarea
             // rows="1"
@@ -147,6 +156,9 @@ export default function Chatbot() {
                 p-id="13207"
               ></path>
             </svg>
+            <div className="reminder_message_conversation">
+              New Conversation
+            </div>
           </div>
           <div className="chatbot_inputButtons chatbot_sentButtn">
             <svg

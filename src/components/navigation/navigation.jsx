@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./navigation.css";
 
 //MUI
@@ -9,13 +9,6 @@ import MenuItem from "@mui/material/MenuItem";
 export default function Navigation() {
   return (
     <div className="nav_main">
-      {/* <div className="nav_logo">
-        <img
-          className="logo"
-          src="https://framerusercontent.com/images/aAfoRwcu4gjKqQXYPejA7Pn3lYY.png"
-        ></img>
-      </div> */}
-
       <img
         className="logo"
         src="https://framerusercontent.com/images/aAfoRwcu4gjKqQXYPejA7Pn3lYY.png"
