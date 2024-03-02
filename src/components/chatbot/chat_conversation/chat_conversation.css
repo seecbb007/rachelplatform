@@ -1,0 +1,38 @@
+@media (min-width: 75rem) {
+  .chatcoversation_main {
+    width: 100%;
+    padding-left: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 38rem;
+  }
+  .allChat {
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .conversation_Container {
+    margin-left: 1rem;
+  }
+  .conversation_user {
+    font-weight: 600;
+  }
+  .questionsList_Containers {
+    width: 50rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .listOfquestions {
+    background-color: #f6f6fd;
+    padding: 0.5rem;
+    font-size: 15px;
+    border-radius: 0.5rem;
+  }
+  .listOfquestions:hover {
+    cursor: pointer;
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./navigation.css";
 
 //MUI
@@ -7,38 +7,16 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
 export default function Navigation() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  function handleClick(event) {
-    setAnchorEl(event.currentTarget);
-  }
-
-  function handleClose() {
-    setAnchorEl(null);
-  }
-
   return (
     <div className="nav_main">
-      {/* <div className="nav_logo">
-        <img
-          className="logo"
-          src="https://framerusercontent.com/images/aAfoRwcu4gjKqQXYPejA7Pn3lYY.png"
-        ></img>
-      </div> */}
       <img
         className="logo"
         src="https://framerusercontent.com/images/aAfoRwcu4gjKqQXYPejA7Pn3lYY.png"
       ></img>
+
       <div className="nav_selections">
         <div className="nav_select">For Loan Officers</div>
-        <div
-          className="nav_select nav_select_w_dropdown"
-          id="demo-positioned-button"
-          aria-controls={open ? "demo-positioned-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-        >
+        <div className="nav_select nav_select_w_dropdown">
           <div className="">Mortgage Products</div>
           <svg
             t="1708657150455"
@@ -76,6 +54,7 @@ export default function Navigation() {
                 ></path>
               </svg>
             </div>
+
             <div className="nav_dropdown_each">Why Restate</div>
             <div className="nav_dropdown_each">Purchase</div>
             <div className="nav_dropdown_each">Refinance</div>

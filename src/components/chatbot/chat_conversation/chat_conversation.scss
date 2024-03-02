@@ -1,0 +1,97 @@
+$layout-breakooint-extralarge: 75rem;
+$layout-breakooint-large: 64rem;
+$layout-breakooint-medium: 48rem;
+$layout-breakooint-small: 30rem;
+$layout-breakooint-extrasmall: 20rem;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: $layout-breakooint-extralarge) {
+  .chatcoversation_main {
+    width: 100%;
+    padding-left: 3rem;
+    @include flexCenter();
+    flex-direction: column;
+    height: 38rem;
+    // border: 1px solid yellow;
+  }
+  .allChat {
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .conversation_Container {
+    margin-left: 1rem;
+    //border: 1px solid blue;
+  }
+  .conversation_user {
+    font-weight: 600;
+  }
+  .questionsList_Containers {
+    width: 50rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    // border: 1px solid red;
+  }
+  .listOfquestions {
+    background-color: #f6f6fd;
+
+    padding: 0.5rem;
+    font-size: 15px;
+    border-radius: 0.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+    //border: 1px solid black;
+  }
+}
+@media (min-width: $layout-breakooint-large) and (max-width: 1199px) {
+}
+
+@media (min-width: $layout-breakooint-medium) and (max-width: 1023px) {
+}
+
+@media (min-width: $layout-breakooint-small) and (max-width: 767px) {
+}
+
+@media (min-width: $layout-breakooint-extrasmall) and (max-width: 479px) {
+}
+
+@media (max-width: 319px) {
+}
+
+// .chat {
+//   //border: 1px solid black;
+//   width: 40rem;
+//   margin-top: 1rem;
+//   display: flex;
+// }
+// .chatIcon_Container {
+//   width: 2.5rem;
+//   height: 2.5rem;
+// }
+// .chatIcon {
+//   background-color: black;
+//   width: 2.5rem;
+//   height: 2.5rem;
+//   @include flexCenter();
+//   border-radius: 0.25rem;
+//   //border: 1px solid red;
+// }
+// .RachaelIcon {
+//   width: 2.5rem;
+//   height: 2.5rem;
+//   background-color: #bdbfc3;
+//   border-radius: 50%;
+// }
