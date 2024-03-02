@@ -1,117 +1,177 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./chatbot.css";
+import Chat_Conversation from "./chat_conversation/chat_coversation";
+import { MESSAGES_DATA } from "../MOCK_DATA";
 
 export default function Chatbot() {
+  const [messages, setMessages] = useState(MESSAGES_DATA);
+  const [textareaInputValue, setTextareaInputValue] = useState("");
+  const [displayChat, setDisplayChat] = useState(false);
+  console.log("----textareaInputValue", textareaInputValue);
+  const newId = new Date().valueOf();
+
+  const handleClickSelection = (e) => {
+    setDisplayChat(true);
+    setTextareaInputValue(e.target.innerText);
+    setMessages([
+      ...messages,
+      { user: "You", message: e.target.innerText, id: newId },
+    ]);
+    setTimeout(() => {
+      setMessages((prev) => [
+        ...prev,
+        {
+          user: "Rachel",
+          message: "Rachel says....(From selection)",
+          id: newId + 1,
+        },
+      ]);
+    }, 1000);
+    setTextareaInputValue("");
+  };
+  const handlesendMessage = (e) => {
+    if (textareaInputValue !== "") {
+      setDisplayChat(true);
+      setMessages([...messages, { user: "You", message: textareaInputValue }]);
+      setTimeout(() => {
+        setMessages((prev) => [
+          ...prev,
+          { user: "Rachel", message: "Rachel says ...." },
+        ]);
+      }, 1000);
+
+      setTextareaInputValue("");
+    }
+  };
+
   return (
     <div className="chatbot_main">
       <div className="chatbot">
-        <div className="rachel_avatar"></div>
-        <div className="rachel_title">Hi, I'm Rachel. How Can I Help?</div>
-        <div className="rachel_selections">
-          <div className="rachel_selections_selct" value="buyHome">
-            <p>I'm looking to buy a home</p>
-            <div className="rachel_arrowbox rachel_arrowbox_select">
-              <svg
-                t="1708723991324"
-                class="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="9379"
-                width="20"
-                height="20"
+        {displayChat ? (
+          <Chat_Conversation messages={messages} />
+        ) : (
+          <div className="rachel_chatMain">
+            <div className="rachel_avatar"></div>
+            <div className="rachel_title">Hi, I'm Rachel. How Can I Help?</div>
+            <div className="rachel_selections">
+              <div
+                className="rachel_selections_selct"
+                value="I'm looking to buy a home"
+                onClick={handleClickSelection}
               >
-                <path
-                  d="M653.248 727.296L608 682.048l149.024-149.056H192v-64h564.992L608 320l45.248-45.248 226.272 226.24z"
-                  fill="#ffffff"
-                  p-id="9380"
-                ></path>
-              </svg>
-            </div>
-          </div>
-          <div className="rachel_selections_selct" value="refinance">
-            <p>I'm looking to refinance my home</p>
-            <div className="rachel_arrowbox rachel_arrowbox_select">
-              <svg
-                t="1708723991324"
-                class="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="9379"
-                width="20"
-                height="20"
+                <p>I'm looking to buy a home</p>
+                <div className="rachel_arrowbox rachel_arrowbox_select">
+                  <svg
+                    t="1708723991324"
+                    className="icon"
+                    viewBox="0 0 1024 1024"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    p-id="9379"
+                    width="20"
+                    height="20"
+                  >
+                    <path
+                      d="M653.248 727.296L608 682.048l149.024-149.056H192v-64h564.992L608 320l45.248-45.248 226.272 226.24z"
+                      fill="#ffffff"
+                      p-id="9380"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div
+                className="rachel_selections_selct"
+                value="refinance"
+                onClick={handleClickSelection}
               >
-                <path
-                  d="M653.248 727.296L608 682.048l149.024-149.056H192v-64h564.992L608 320l45.248-45.248 226.272 226.24z"
-                  fill="#ffffff"
-                  p-id="9380"
-                ></path>
-              </svg>
-            </div>
-          </div>
-          <div className="rachel_selections_selct" value="cashOut">
-            <p>I'm looking to take cash out</p>
-            <div className="rachel_arrowbox rachel_arrowbox_select">
-              <svg
-                t="1708723991324"
-                class="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="9379"
-                width="20"
-                height="20"
+                <p>I'm looking to refinance my home</p>
+                <div className="rachel_arrowbox rachel_arrowbox_select">
+                  <svg
+                    t="1708723991324"
+                    className="icon"
+                    viewBox="0 0 1024 1024"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    p-id="9379"
+                    width="20"
+                    height="20"
+                  >
+                    <path
+                      d="M653.248 727.296L608 682.048l149.024-149.056H192v-64h564.992L608 320l45.248-45.248 226.272 226.24z"
+                      fill="#ffffff"
+                      p-id="9380"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div
+                className="rachel_selections_selct"
+                value="cashOut"
+                onClick={handleClickSelection}
               >
-                <path
-                  d="M653.248 727.296L608 682.048l149.024-149.056H192v-64h564.992L608 320l45.248-45.248 226.272 226.24z"
-                  fill="#ffffff"
-                  p-id="9380"
-                ></path>
-              </svg>
+                <p>I'm looking to take cash out</p>
+                <div className="rachel_arrowbox rachel_arrowbox_select">
+                  <svg
+                    t="1708723991324"
+                    className="icon"
+                    viewBox="0 0 1024 1024"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    p-id="9379"
+                    width="20"
+                    height="20"
+                  >
+                    <path
+                      d="M653.248 727.296L608 682.048l149.024-149.056H192v-64h564.992L608 320l45.248-45.248 226.272 226.24z"
+                      fill="#ffffff"
+                      p-id="9380"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div className="rachel_preapprovalSelections">
+              <div>
+                <div
+                  className="rachel_preapprovalSelections_title"
+                  style={{ fontWeight: "600" }}
+                >
+                  Instant Prequal Letter
+                </div>
+                <div
+                  className="rachel_preapprovalSelections_subtitle"
+                  style={{ fontWeight: "300" }}
+                >
+                  I'm looking to get a 2 minutes prequalification Letter
+                </div>
+              </div>
+              <div className="rachel_arrowbox">
+                <svg
+                  t="1708723991324"
+                  className="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="9379"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M653.248 727.296L608 682.048l149.024-149.056H192v-64h564.992L608 320l45.248-45.248 226.272 226.24z"
+                    fill="#481970"
+                    p-id="9380"
+                  ></path>
+                </svg>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="rachel_preapprovalSelections">
-          <div>
-            <div
-              className="rachel_preapprovalSelections_title"
-              style={{ fontWeight: "600" }}
-            >
-              Instant Prequal Letter
-            </div>
-            <div
-              className="rachel_preapprovalSelections_subtitle"
-              style={{ fontWeight: "300" }}
-            >
-              I'm looking to get a 2 minutes prequalification Letter
-            </div>
-          </div>
-          <div className="rachel_arrowbox">
-            <svg
-              t="1708723991324"
-              class="icon"
-              viewBox="0 0 1024 1024"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              p-id="9379"
-              width="20"
-              height="20"
-            >
-              <path
-                d="M653.248 727.296L608 682.048l149.024-149.056H192v-64h564.992L608 320l45.248-45.248 226.272 226.24z"
-                fill="#481970"
-                p-id="9380"
-              ></path>
-            </svg>
-          </div>
-        </div>
+        )}
         <div className="rachel_inputContainer">
-          <label class="custom_file_upload remind" id="reminder_upload">
+          <label className="custom_file_upload remind" id="reminder_upload">
             <input type="file" style={{ display: "none" }} />
             <svg
               t="1708728039216"
-              class="icon"
+              className="icon"
               viewBox="0 0 1024 1024"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -128,16 +188,16 @@ export default function Chatbot() {
             <div className="reminder_message">Analyze pictures and files</div>
           </label>
           <textarea
-            // rows="1"
-            cols="50"
             id="chatbotInput"
             name="chatbotInput"
             placeholder="How can I help?"
+            value={textareaInputValue}
+            onChange={(e) => setTextareaInputValue(e.target.value)}
           ></textarea>
           <div className="chatbot_inputButtons chatbot_reloadButtn">
             <svg
               t="1708727483003"
-              class="icon"
+              className="icon"
               viewBox="0 0 1024 1024"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -160,10 +220,13 @@ export default function Chatbot() {
               New Conversation
             </div>
           </div>
-          <div className="chatbot_inputButtons chatbot_sentButtn">
+          <div
+            className="chatbot_inputButtons chatbot_sentButtn"
+            onClick={(e) => handlesendMessage(e)}
+          >
             <svg
               t="1708727533633"
-              class="icon"
+              className="icon"
               viewBox="0 0 1024 1024"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"

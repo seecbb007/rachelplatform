@@ -6,6 +6,15 @@
     justify-content: center;
     align-items: center;
   }
+  .rachel_chatMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 38rem;
+    overflow-y: auto;
+    //border: 1px solid red;
+  }
   .chatbot {
     width: 60em;
     margin-top: 3rem;
@@ -87,7 +96,7 @@
     width: 35rem;
     resize: none;
     overflow: auto;
-    line-height: 1.25rem;
+    line-height: 2.4rem;
   }
   #chatbotInput:focus {
     outline: none;
@@ -158,6 +167,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .rachel_chatMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 38rem;
   }
   .rachel_avatar {
     background-color: #bdbfc3;
@@ -232,7 +248,7 @@
     width: 35rem;
     resize: none;
     overflow: auto;
-    line-height: 1.25rem;
+    line-height: 2.4rem;
   }
   #chatbotInput:focus {
     outline: none;
@@ -303,6 +319,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .rachel_chatMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 38rem;
   }
   .rachel_avatar {
     background-color: #bdbfc3;
@@ -380,7 +403,7 @@
     width: 15rem;
     resize: none;
     overflow: auto;
-    line-height: 1.25rem;
+    line-height: 2.4rem;
   }
   #chatbotInput:focus {
     outline: none;
@@ -453,6 +476,13 @@
     justify-content: center;
     align-items: center;
   }
+  .rachel_chatMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 38rem;
+  }
   .rachel_avatar {
     background-color: #bdbfc3;
     border-radius: 50%;
@@ -529,7 +559,7 @@
     width: 15rem;
     resize: none;
     overflow: auto;
-    line-height: 1.25rem;
+    line-height: 2.4rem;
   }
   #chatbotInput:focus {
     outline: none;
@@ -602,6 +632,13 @@
     justify-content: center;
     align-items: center;
   }
+  .rachel_chatMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 38rem;
+  }
   .rachel_avatar {
     background-color: #bdbfc3;
     border-radius: 50%;
@@ -663,6 +700,7 @@
     align-items: center;
   }
   .rachel_inputContainer {
+    min-width: 18rem;
     position: relative;
     margin-top: 2rem;
     min-width: 16rem;
@@ -677,7 +715,7 @@
     width: 5rem;
     resize: none;
     overflow: auto;
-    line-height: 1.25rem;
+    line-height: 2rem;
   }
   #chatbotInput:focus {
     outline: none;
@@ -748,6 +786,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .rachel_chatMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 38rem;
   }
   .rachel_avatar {
     background-color: #bdbfc3;

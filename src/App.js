@@ -14,8 +14,8 @@ function App() {
         <div className="text-gray-500 text-lg">React Tailwind</div>
       </div> */}
       {/* <Routes></Routes> */}
-      <Navigation></Navigation>
-      <Sidebar></Sidebar>
+      {/* <Navigation></Navigation>
+      <Sidebar></Sidebar> */}
       <Chatbot></Chatbot>
     </div>
   );
