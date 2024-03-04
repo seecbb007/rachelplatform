@@ -2,28 +2,18 @@ import React, { useState } from "react";
 import "./chat_conversation.css";
 import ConversationCard from "./conversationCard";
 import { QUESTION_LIST } from "../../MOCK_DATA";
+import { useSelector } from "react-redux";
 
-export default function Chatcoversation({ messages }) {
-  const [userChat, setUserChat] = useState({});
-
-  console.log("aaa", messages);
+export default function Chatcoversation() {
+  const chatMessage = useSelector((state) => {
+    return state.chatbotReducer.chatMessage;
+  });
+  console.log("chatMessage,", chatMessage);
   return (
     <div className="chatcoversation_main">
       <div className="allChat">
-        {messages.map((eachMessage) => {
-          return (
-            <ConversationCard messages={eachMessage} key={eachMessage.id} />
-          );
-        })}
-      </div>
-
-      <div className="questionsList_Containers">
-        {QUESTION_LIST.map((eachQuestion) => {
-          return (
-            <div className="listOfquestions" key={eachQuestion}>
-              {eachQuestion}
-            </div>
-          );
+        {chatMessage.map((eachMessage) => {
+          return <ConversationCard messageData={eachMessage} />;
         })}
       </div>
     </div>
