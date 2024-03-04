@@ -1,8 +1,10 @@
-$layout-breakooint-extralarge: 75rem;
 $layout-breakooint-large: 64rem;
+//1024
 $layout-breakooint-medium: 48rem;
+//768
 $layout-breakooint-small: 30rem;
-$layout-breakooint-extrasmall: 20rem;
+//480px
+$layout-breakooint-xsmall: 20rem;
 
 @mixin flexCenter {
   display: flex;
@@ -14,32 +16,188 @@ $layout-breakooint-extrasmall: 20rem;
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: $layout-breakooint-large) {
+  .chat {
+    //border: 1px solid black;
+    width: 40rem;
+    margin-top: 1rem;
+    display: flex;
+  }
+  .chatIcon_Container {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .chatIcon {
+    background-color: black;
+    width: 2.5rem;
+    height: 2.5rem;
+    @include flexCenter();
+    border-radius: 0.25rem;
+    //border: 1px solid red;
+  }
+  .RachaelIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #bdbfc3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .conversation_Container {
+    width: 100%;
+  }
+  .conversation_content {
+    word-wrap: break-word;
+    width: 100%;
+  }
+}
+@media (min-width: $layout-breakooint-medium) and (max-width: 1023px) {
+  .chat {
+    //border: 1px solid green;
+    width: 29rem;
+    margin-top: 1rem;
+    display: flex;
+  }
+  .chatIcon_Container {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .chatIcon {
+    background-color: black;
+    width: 2.5rem;
+    height: 2.5rem;
+    @include flexCenter();
+    border-radius: 0.25rem;
+    //border: 1px solid red;
+  }
+  .RachaelIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #bdbfc3;
 
-.chat {
-  //border: 1px solid black;
-  width: 40rem;
-  margin-top: 1rem;
-  display: flex;
-}
-.chatIcon_Container {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-.chatIcon {
-  background-color: black;
-  width: 2.5rem;
-  height: 2.5rem;
-  @include flexCenter();
-  border-radius: 0.25rem;
-  //border: 1px solid red;
-}
-.RachaelIcon {
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: #bdbfc3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .conversation_Container {
+    width: 100%;
+  }
+  .conversation_content {
+    // overflow-wrap: break-word;
+    word-wrap: break-word;
+    //white-space: pre-wrap;
 
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+  }
 }
+
+@media (min-width: $layout-breakooint-small) and (max-width: 767px) {
+  .chat {
+    //border: 1px solid green;
+    width: 26rem;
+    margin-top: 1rem;
+    display: flex;
+  }
+  .chatIcon_Container {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .chatIcon {
+    background-color: black;
+    width: 2.5rem;
+    height: 2.5rem;
+    @include flexCenter();
+    border-radius: 0.25rem;
+    //border: 1px solid red;
+  }
+  .RachaelIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #bdbfc3;
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .conversation_Container {
+    width: 100%;
+  }
+  .conversation_content {
+    // overflow-wrap: break-word;
+    word-wrap: break-word;
+    //white-space: pre-wrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 479px) {
+  .chat {
+    //border: 1px solid green;
+    width: 18rem;
+    margin-top: 1rem;
+    display: flex;
+  }
+  .chatIcon_Container {
+    width: 2rem;
+    height: 2rem;
+  }
+  .chatIcon {
+    background-color: black;
+    width: 2rem;
+    height: 2rem;
+    @include flexCenter();
+    border-radius: 0.25rem;
+    //border: 1px solid red;
+  }
+  .RachaelIcon {
+    width: 2rem;
+    height: 2rem;
+    background-color: #bdbfc3;
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .conversation_Container {
+    width: 100%;
+  }
+  .conversation_content {
+    // overflow-wrap: break-word;
+    word-wrap: break-word;
+    //white-space: pre-wrap;
+    width: 100%;
+  }
+}
+
+// .chat {
+//   //border: 1px solid black;
+//   width: 40rem;
+//   margin-top: 1rem;
+//   display: flex;
+// }
+// .chatIcon_Container {
+//   width: 2.5rem;
+//   height: 2.5rem;
+// }
+// .chatIcon {
+//   background-color: black;
+//   width: 2.5rem;
+//   height: 2.5rem;
+//   @include flexCenter();
+//   border-radius: 0.25rem;
+//   //border: 1px solid red;
+// }
+// .RachaelIcon {
+//   width: 2.5rem;
+//   height: 2.5rem;
+//   background-color: #bdbfc3;
+
+//   border-radius: 50%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }

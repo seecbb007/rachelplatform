@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./conversationCard.css";
 
-export default function ConversationCard({ messages }) {
-  const { message, user, id } = messages;
+export default function ConversationCard({ messageData }) {
+  const { user, message, id } = messageData;
 
   return (
     <>
