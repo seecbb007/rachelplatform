@@ -124,13 +124,21 @@ $layout-breakooint-xsmall: 20rem;
     padding-bottom: 2rem;
   }
   .questionsList_Containers {
-    width: 45rem;
+    //width: 45rem;
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    overflow-x: hidden;
-    // border: 1px solid red;
+    overflow-x: auto;
+    //border: 1px solid red;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .listOfquestions {
+    margin: 0 0.5rem;
+    white-space: nowrap;
   }
   .rachel_inputContainer {
     position: relative;
@@ -312,15 +320,24 @@ $layout-breakooint-xsmall: 20rem;
     //border: 1px solid red;
     //border: 1px solid blue;
     padding-bottom: 2rem;
-    width: 30rem;
+    // width: 30rem;
   }
   .questionsList_Containers {
+    width: 30rem;
     display: flex;
     justify-content: space-between;
+    // justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    overflow-x: hidden;
-    // border: 1px solid red;
+    overflow-x: auto;
+    //border: 1px solid red;
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+  }
+  .listOfquestions {
+    margin: 0 0.5rem;
+    white-space: nowrap;
   }
   .rachel_inputContainer {
     position: relative;
@@ -505,8 +522,12 @@ $layout-breakooint-xsmall: 20rem;
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    overflow-x: hidden;
+    overflow-x: auto;
     // border: 1px solid red;
+  }
+  .listOfquestions {
+    margin: 0 0.5rem;
+    white-space: nowrap;
   }
   .rachel_inputContainer {
     position: relative;
@@ -693,8 +714,12 @@ $layout-breakooint-xsmall: 20rem;
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    overflow-x: hidden;
+    overflow-x: auto;
     // border: 1px solid red;
+  }
+  .listOfquestions {
+    margin: 0 0.5rem;
+    white-space: nowrap;
   }
   .rachel_inputContainer {
     position: relative;
