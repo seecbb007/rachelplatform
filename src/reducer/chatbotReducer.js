@@ -17,8 +17,15 @@ export const chatbotReducer = createSlice({
     setChatMessage: (state, action) => {
       state.chatMessage.push(action.payload);
     },
+    clearChatMessage: (state) => {
+      state.chatMessage = [];
+    },
   },
 });
-export const { setDisplayChat, setTextareaInputValue, setChatMessage } =
-  chatbotReducer.actions;
+export const {
+  setDisplayChat,
+  setTextareaInputValue,
+  setChatMessage,
+  clearChatMessage,
+} = chatbotReducer.actions;
 export default chatbotReducer.reducer;

@@ -8,12 +8,14 @@ export default function Chatcoversation() {
   const chatMessage = useSelector((state) => {
     return state.chatbotReducer.chatMessage;
   });
-  console.log("chatMessage,", chatMessage);
+  console.log("chatMessage", chatMessage);
   return (
     <div className="chatcoversation_main">
       <div className="allChat">
         {chatMessage.map((eachMessage) => {
-          return <ConversationCard messageData={eachMessage} />;
+          return (
+            <ConversationCard key={eachMessage.id} messageData={eachMessage} />
+          );
         })}
       </div>
     </div>

@@ -12,7 +12,7 @@ export const MESSAGES_DATA = [
 ];
 
 export const QUESTION_LIST = [
-  "How to find a real estate agent?",
-  "What are the steps to buy a home",
-  " How to get pre-approved for a loan",
+  { id: "buyQ1", question: "How to find a real estate agent?" },
+  { id: "buyQ2", question: " What are the steps to buy a home" },
+  { id: "buyQ3", question: " How to get pre-approved for a loan" },
 ];
