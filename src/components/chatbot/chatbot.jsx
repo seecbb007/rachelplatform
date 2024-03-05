@@ -8,6 +8,7 @@ import {
   setDisplayChat,
   setTextareaInputValue,
   setChatMessage,
+  clearChatMessage,
 } from "../../reducer/chatbotReducer";
 
 export default function Chatbot() {
@@ -20,17 +21,13 @@ export default function Chatbot() {
   const textareaInputValue = useSelector((state) => {
     return state.chatbotReducer.textareaInputValue;
   });
-  const chatMessage = useSelector((state) => {
-    //console.log("message", state.chatbotReducer.chatMessage);
-    return state.chatbotReducer.chatMessage;
-  });
   const newId = new Date().valueOf();
 
   //local state
   const [currentInput, setCurrentInput] = useState("");
 
+  //function
   const handleClickSelection = (e) => {
-    console.log("click", e.target.innerText);
     dispatch(setDisplayChat(true));
     dispatch(setTextareaInputValue(e.target.innerText));
     dispatch(
@@ -52,7 +49,6 @@ export default function Chatbot() {
     dispatch(setTextareaInputValue(""));
   };
   const handlesendMessage = (e) => {
-    console.log("22222", textareaInputValue);
     if (currentInput !== "") {
       dispatch(setDisplayChat(true));
       dispatch(
@@ -72,10 +68,13 @@ export default function Chatbot() {
         );
       }, 1000);
       setCurrentInput("");
-      // dispatch(setTextareaInputValue(""));
     }
   };
 
+  const handleClearAllMessage = () => {
+    dispatch(clearChatMessage());
+    dispatch(setDisplayChat(false));
+  };
   return (
     <div className="chatbot_main">
       <div className="chatbot">
@@ -205,7 +204,11 @@ export default function Chatbot() {
           <div className="questionsList_Containers">
             {displayChat ? (
               QUESTION_LIST.map((eachQuestion) => {
-                return <div className="listOfquestions">{eachQuestion}</div>;
+                return (
+                  <div className="listOfquestions" key={eachQuestion.id}>
+                    {eachQuestion.question}
+                  </div>
+                );
               })
             ) : (
               <div></div>
@@ -239,7 +242,11 @@ export default function Chatbot() {
               value={currentInput}
               onChange={(e) => setCurrentInput(e.target.value)}
             ></textarea>
-            <div className="chatbot_inputButtons chatbot_reloadButtn">
+
+            <div
+              className="chatbot_inputButtons chatbot_reloadButtn"
+              onClick={() => handleClearAllMessage()}
+            >
               <svg
                 t="1708727483003"
                 className="icon"
