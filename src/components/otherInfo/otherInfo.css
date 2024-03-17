@@ -1,0 +1,46 @@
+.example1 {
+  border: 5px solid red;
+}
+
+.example1_Container {
+  width: 80rem;
+  border: 1px solid #b77373;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.otherInfo_header1 {
+  color: grey;
+}
+
+.otherInfo_box {
+  width: 20rem;
+  background-color: bisque;
+  margin: 5px 0;
+}
+
+.transactionList {
+  background-color: #f0dbcd;
+}
+
+.transactionList_eachList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.creditReport_structure {
+  border: 5px solid blue;
+  margin-top: 3rem;
+}
+
+.creditReportList_eachList {
+  background-color: #f0db9b;
+}
+
+.creditReportList_eachList {
+  display: flex;
+  justify-content: space-evenly;
+}

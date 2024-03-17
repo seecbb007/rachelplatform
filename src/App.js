@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/navigation/navigation";
 import Sidebar from "./components/sidebar/sidebar";
 import Chatbot from "./components/chatbot/chatbot";
+import OtherInfo from "./components/otherInfo/otherInfo";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       {/* <Navigation></Navigation>
       <Sidebar></Sidebar> */}
       <Chatbot></Chatbot>
+      <OtherInfo></OtherInfo>
     </div>
   );
 }
