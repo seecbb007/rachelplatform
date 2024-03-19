@@ -113,7 +113,7 @@ export default function CreditReport() {
             </TableContainer>
 
             <TableContainer component={Paper} sx={{ margin: "2rem 0" }}>
-              <Typography>Opened Account</Typography>
+              <Typography>Recent Opened Account</Typography>
               <Table aria-label="simple table">
                 <TableHead>
                   <TableRow>
