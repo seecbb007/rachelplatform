@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,10 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.iamBorder {
+  height: 2rem;
+  background-color: grey;
+  text-align: center;
+  font-weight: 700;
 }
