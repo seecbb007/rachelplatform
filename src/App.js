@@ -7,6 +7,9 @@ import Sidebar from "./components/sidebar/sidebar";
 import Chatbot from "./components/chatbot/chatbot";
 import OtherInfo from "./components/otherInfo/otherInfo";
 import CreditReport from "./components/creditReport/creditReport";
+import SideOtherInfoPaystub from "./components/sideOtherInfo/sideOtherInfoPaystub";
+import SideOtherInfoW2 from "./components/sideOtherInfo/sideOtherInfoW2";
+import SideOtherInfoBankStatement from "./components/sideOtherInfo/sideOtherInfoBankStatement";
 
 function App() {
   return (
@@ -15,6 +18,12 @@ function App() {
       <div className="iamBorder">I am a border</div>
       {/* s<OtherInfo></OtherInfo> */}
       <CreditReport></CreditReport>
+      <div className="iamBorder">I am a border</div>
+      <SideOtherInfoPaystub></SideOtherInfoPaystub>
+      <div className="iamBorder">I am a border</div>
+      <SideOtherInfoW2></SideOtherInfoW2>
+      <div className="iamBorder">I am a border</div>
+      <SideOtherInfoBankStatement></SideOtherInfoBankStatement>
     </div>
   );
 }

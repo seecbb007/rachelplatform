@@ -1,0 +1,21 @@
+.sideOtherInfo {
+  border: 2px solid red;
+  min-width: 35rem;
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #e7ecef;
+}
+.sideOtherInfo_title {
+  font-size: 2rem;
+}
+/* .sideOtherInfo_Container {
+  background-color: beige;
+} */
+
+.eachPaystub {
+  display: flex;
+}
+.sideOtherInfo_section {
+  border: 1px solid black;
+  width: 50%;
+}
