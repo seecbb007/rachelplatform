@@ -18,14 +18,14 @@ export const mockData = {
       listOfDebts: [
         {
           creditorName: "Credit Card Company",
-          accountType: "credit Card",
+          accountType: "revolving account",
           accountNumber: "****1234",
           monthlyPayment: 80,
           balance: 3000,
         },
         {
           creditorName: "Credit Card Company",
-          accountType: "credit Card",
+          accountType: "revolving account",
           accountNumber: "****12345",
           monthlyPayment: 25,
           balance: 1000,
@@ -43,6 +43,20 @@ export const mockData = {
           accountNumber: "****5600",
           monthlyPayment: 500,
           balance: 10000,
+        },
+        {
+          creditorName: "Citi credit card",
+          accountType: "revolving account",
+          accountNumber: "****1234",
+          monthlyPayment: 25,
+          balance: 200,
+        },
+        {
+          creditorName: "CHASE credit card",
+          accountType: "revolving account",
+          accountNumber: "****12345",
+          monthlyPayment: 25,
+          balance: 0,
         },
       ],
     },

@@ -45,7 +45,6 @@ export default function CreditReport() {
 
   const rows = [
     createData(1, "Citi credit card", " 01 /2023"),
-    createData(2, "USAA Saving Account", " 01 /2023"),
     createData(3, "CHASE credit card", " 02 /2023"),
   ];
   const [mockPersonalDataCreditReport, setMockPersonalDataCreditReport] =
@@ -114,7 +113,7 @@ export default function CreditReport() {
             </TableContainer>
 
             <TableContainer component={Paper} sx={{ margin: "2rem 0" }}>
-              <Typography>Opened Account</Typography>
+              <Typography>Recent Opened Account</Typography>
               <Table aria-label="simple table">
                 <TableHead>
                   <TableRow>
