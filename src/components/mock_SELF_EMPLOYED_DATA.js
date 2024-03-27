@@ -144,6 +144,13 @@ export const Mock_FederalTax1040_SCHEDULEC = {
 export const Mock_FORM1065 = {
   fileData: {
     personalInfo: {},
+    companyInfo: {
+      name: "",
+      address: "",
+      dateIncorporated: "",
+      signHere: "",
+      date: "",
+    },
     data: {
       ordinaryIncomeK1: 300000,
       rentalIncomeK1: 100000,
@@ -164,7 +171,8 @@ export const Mock_FORM1065 = {
 };
 export const Mock_CORPORATION1120 = {
   fileData: {
-    personalInfo: {
+    personalInfo: {},
+    companyInfo: {
       name: "",
       address: "",
       dateIncorporated: "",
@@ -192,6 +200,13 @@ export const Mock_CORPORATION1120 = {
 export const Mock_CORPORATION1120S = {
   fileData: {
     personalInfo: {
+      name: "",
+      address: "",
+      dateIncorporated: "",
+      signHere: "",
+      date: "",
+    },
+    companyInfo: {
       name: "",
       address: "",
       dateIncorporated: "",
