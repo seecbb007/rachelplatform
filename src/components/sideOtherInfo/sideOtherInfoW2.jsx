@@ -30,18 +30,18 @@ export default function SideOtherInfoW2() {
     },
   ];
   const mockW2Genera2 = [
-    { number: 1, itemName: "Year", item: "2023" },
-    { number: 2, itemName: "Employer Name", item: "xxxx comapny" },
+    { number: 10, itemName: "Year", item: "2023" },
+    { number: 20, itemName: "Employer Name", item: "xxxx comapny" },
     {
-      number: 3,
+      number: 30,
       itemName: "Employe Name",
       item: "John Doe",
     },
 
-    { number: 4, itemName: "Employee Spcoa; Security", item: "xxx-xx-xxxx" },
+    { number: 40, itemName: "Employee Spcoa; Security", item: "xxx-xx-xxxx" },
 
     {
-      number: 5,
+      number: 50,
       itemName: "Employee Mailing Address",
       item: "123 Main St,xxx city, CA, 12345",
     },
