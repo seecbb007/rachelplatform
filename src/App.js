@@ -11,6 +11,7 @@ import SideOtherInfoPaystub from "./components/sideOtherInfo/sideOtherInfoPaystu
 import SideOtherInfoW2 from "./components/sideOtherInfo/sideOtherInfoW2";
 import SideOtherInfoBankStatement from "./components/sideOtherInfo/sideOtherInfoBankStatement";
 import Selfemployed_scheduleC from "./components/selfemployed/selfemployed_scheduleC";
+import PricingEngine from "./components/pricingEngine/pricingEngine";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
       <SideOtherInfoBankStatement></SideOtherInfoBankStatement>
       <div className="iamBorder">I am a border</div>
       <Selfemployed_scheduleC></Selfemployed_scheduleC>
+      <div className="iamBorder">I am a border</div>
+      <PricingEngine></PricingEngine>
     </div>
   );
 }

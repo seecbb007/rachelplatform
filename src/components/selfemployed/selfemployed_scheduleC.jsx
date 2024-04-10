@@ -286,7 +286,6 @@ export default function Selfemployed_scheduleC() {
       </div>
       <div className="sideOtherInfo_Container">
         <div className="sideOtherInfo_title">Schedul C </div>
-
         <div className="eachPaystub">
           <div className="sideOtherInfo_section">
             <div>2022 Schedule C from Form 1040</div>

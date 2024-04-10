@@ -1,0 +1,32 @@
+.pricingEngine_component {
+  height: 100vh;
+  border: 2px solid #d4dae2;
+  padding: 1rem;
+  min-width: 35rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pe_title {
+  font-size: 2rem;
+}
+
+.rateSearchingTable {
+  background: #f9fafb;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.rateSearchingTable .rateSearching_buttonGroup_eachbutt {
+  border: 1px solid #3537d0;
+  background-color: #e4e4e4;
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.engine_selectionBox {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+}

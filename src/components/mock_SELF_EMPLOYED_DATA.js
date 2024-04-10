@@ -98,3 +98,5 @@ export const MOCK_PARTNERSHIP1065_DATA = {
     w2: 20000,
   },
 };
+
+export const MOCK_FORM1040_DATA = {};
