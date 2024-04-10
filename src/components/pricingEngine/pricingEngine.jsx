@@ -182,7 +182,7 @@ export default function PricingEngine() {
       width: 150,
     },
   ];
-  const rows = [
+  const pricingrows = [
     // { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
     // { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
     {
@@ -196,6 +196,12 @@ export default function PricingEngine() {
       lender: "UWM",
       lender_creditpoint: "- $1000",
       monthlyPayment: "$8300",
+    },
+    {
+      id: "6.5%",
+      lender: "UWM",
+      lender_creditpoint: "- $2000",
+      monthlyPayment: "$8600",
     },
   ];
 
@@ -398,7 +404,7 @@ export default function PricingEngine() {
               <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
                 <TabList
                   onChange={handlePricingChange}
-                  aria-label="lab API tabs example"
+                  aria-label="lab API tabs pricing"
                 >
                   <Tab
                     label="30yr Fixed"
@@ -425,13 +431,13 @@ export default function PricingEngine() {
               </Box>
               <TabPanel value="1">
                 <div>Item One, 30yr Fixed, EXAMPLE</div>
-                <div style={{ height: 400, width: "100%" }}>
+                <div style={{ height: "20rem", width: "100%" }}>
                   <DataGrid
-                    rows={rows}
+                    rows={pricingrows}
                     columns={columns}
                     initialState={{
                       pagination: {
-                        paginationModel: { page: 0, pageSize: 5 },
+                        paginationModel: { page: 0, pageSize: 10 },
                       },
                     }}
                     pageSizeOptions={[5, 10]}
@@ -439,7 +445,45 @@ export default function PricingEngine() {
                   />
                 </div>
               </TabPanel>
-              <TabPanel value="2">Item Two, 20yr Fixed</TabPanel>
+              <TabPanel value="2">
+                <div> Item Two, 20yr Fixed</div>
+
+                <TableContainer component={Paper}>
+                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>Interest</TableCell>
+                        <TableCell align="right">Lender</TableCell>
+                        <TableCell align="right">
+                          Lender Credit/Points
+                        </TableCell>
+                        <TableCell align="right">
+                          Monthly Payment (P + I)
+                        </TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {pricingrows.map((row) => (
+                        <TableRow
+                          key={row.name}
+                          sx={{
+                            "&:last-child td, &:last-child th": { border: 0 },
+                          }}
+                        >
+                          <TableCell align="left">{row.id}</TableCell>
+                          <TableCell align="right">{row.lender}</TableCell>
+                          <TableCell align="right">
+                            {row.lender_creditpoint}
+                          </TableCell>
+                          <TableCell align="right">
+                            {row.monthlyPayment}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </TabPanel>
               <TabPanel value="3">Item Three,15</TabPanel>
               <TabPanel value="4">Item Four,10</TabPanel>
               <TabPanel value="5">Item Five,ARM</TabPanel>
