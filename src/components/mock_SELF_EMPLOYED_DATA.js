@@ -99,4 +99,4 @@ export const MOCK_PARTNERSHIP1065_DATA = {
   },
 };
 
-export const MOCK_FORM1040_DATA = {};
+// export const MOCK_FORM1040_DATA = {};
