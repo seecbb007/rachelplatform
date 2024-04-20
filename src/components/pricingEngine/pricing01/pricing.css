@@ -1,0 +1,21 @@
+.each_pricingItem {
+  border: 1px solid salmon;
+  width: 80%;
+}
+
+.pricingItem_TitleContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pringItem_ItemContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rachel_button {
+  background-color: #3537d0;
+  color: white;
+  border-radius: 1rem;
+  margin-left: 2rem;
+}
