@@ -12,6 +12,7 @@ import SideOtherInfoW2 from "./components/sideOtherInfo/sideOtherInfoW2";
 import SideOtherInfoBankStatement from "./components/sideOtherInfo/sideOtherInfoBankStatement";
 import Selfemployed_scheduleC from "./components/selfemployed/selfemployed_scheduleC";
 import PricingEngine from "./components/pricingEngine/pricingEngine";
+import Pricing1 from "./components/pricingEngine/pricing01/pricing";
 
 function App() {
   return (
@@ -30,8 +31,13 @@ function App() {
       <Selfemployed_scheduleC></Selfemployed_scheduleC>
       <div className="iamBorder">I am a border</div>
       <PricingEngine></PricingEngine>
+      <div className="iamBorder" style={{ marginTop: "20rem" }}>
+        I am a border
+      </div>
+      <Pricing1></Pricing1>
     </div>
   );
 }
+// "start": "nodemon --exec 'react-scripts start'",
 
 export default App;
